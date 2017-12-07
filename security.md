@@ -1,4 +1,5 @@
-##Spring Security
+
+###Spring Security
 *Spring Security是一个能够为基于Spring的企业应用系统提供声明式的安全访问控制解决方案的安全框架。主要作用是认证和授权，通过过滤器和拦截器做到安全访问控制的效果.*
 
 > 选择协议：启动时，就加载全部权限
@@ -7,9 +8,9 @@
 
 ###依赖导入
 > - 首先创建一个**Spring Starter project**项目  **jar**工程
-  - 先导入**security**和**web**依赖，
-  - 由于要用到thymeleaf所以要导入**thymeleaf**依赖，
-  - css的样式要求也要导入**bootstrap**依赖。
+> - 先导入**security**和**web**依赖，
+> - 由于要用到thymeleaf所以要导入**thymeleaf**依赖，
+> - css的样式要求也要导入**bootstrap**依赖。
 
 ###登陆控制
 > 在src/main/java下创建一个类和Application相同目录下的（不然不一定能访问的到）
@@ -54,12 +55,11 @@
 	 }
     }
  ```
- 
-   **这里面设置跳转路径只能是login否则不会进行页面跳转**
-         
-   - loginController
-         > Controller跳转login必须要用get方式提交，因为get只能查看数据库资源，可以通过CSRF保护机制，而post方式提交就涉及到可以修改数据库信息。CSRF保护机制就会拒绝访问。
-         
+		**这里面设置跳转路径只能是login否则不会进行页面跳转**
+		         
+		    - loginController
+		         > Controller跳转login必须要用get方式提交，因为get只能查看数据库资源，可以通过CSRF保护机制，而post方式提交就涉及到可以修改数据库信息。CSRF保护机制就会拒绝访问。
+				         
   ```
 	@Controller
 	public class LoginController {
